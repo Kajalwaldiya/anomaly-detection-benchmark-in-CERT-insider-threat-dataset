@@ -122,7 +122,7 @@ def evaluate_model(X_test_scaled, y_test, best_model, model_name="xgb"):
 
 
 # Load your data prepare features and target
-X, y = load_data()
+X, y, _ = load_data()
 X_train_scaled, X_test_scaled, y_train, y_test = split_and_scale(X, y)
 
 param_grid = build_xgb_param_grid(y_train)

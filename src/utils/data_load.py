@@ -26,7 +26,7 @@ def load_data() -> tuple[pd.DataFrame, pd.Series]:
     feature_cols = [col for col in df.columns if col not in EXCLUDE_COLS]
     X = df[feature_cols]
     y = df[TARGET_COL]
-    return X, y
+    return X, y, df
 
 
 def split_and_scale(X: pd.DataFrame, y: pd.Series) -> tuple[np.ndarray, np.ndarray, pd.Series, pd.Series]:
@@ -36,7 +36,6 @@ def split_and_scale(X: pd.DataFrame, y: pd.Series) -> tuple[np.ndarray, np.ndarr
         y: The target Series.
     returns: A tuple containing the scaled training features, scaled testing features, training target, and testing target.
     """
-  
     # Train-test split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, stratify=y, test_size=TEST_SIZE, random_state=RANDOM_STATE
