@@ -32,7 +32,7 @@ The dataset presents a challenging class imbalance: only ~9% of samples are labe
 
 ### CERT Insider Threat Dataset (r4.2)
 
- — Carnegie Mellon University SEI. Simulates 18 months of enterprise user activity (~1,000 users) across logon, file, email, HTTP, and USB events. Ground-truth labels mark malicious insider sessions.
+ Carnegie Mellon University SEI. Simulates 18 months of enterprise user activity (~1,000 users) across logon, file, email, HTTP, and USB events. Ground-truth labels mark malicious insider sessions.
 
 Obtain via: https://kilthub.cmu.edu/articles/dataset/Insider_Threat_Test_Dataset/12841247
 
@@ -162,11 +162,15 @@ Features are engineered at the **user-day level** by aggregating behavioral sign
 
 <p align="center">
   <img src="results/confusion_matriix_rf.png" width="45%"/>
-  <img src="results/roc_curve_rf.png" width="45%"/>
+  <!-- <img src="results/roc_curve_rf.png" width="45%"/> -->
 </p>
 <p align="center">
+  <img src="results/roc_curve_rf.png" width="45%"/>
   <img src="results/precision_vs_recall_rf.png" width="45%"/>
 </p>
+<!-- <p align="center">
+  
+</p> -->
 
 ---
 
@@ -186,9 +190,10 @@ XGBoost outperforms Random Forest on all metrics, better precision/recall balanc
 
 <p align="center">
   <img src="results/confusion_matrix_xgb.png" width="45%"/>
-  <img src="results/roc_curve_xgb.png" width="45%"/>
+  
 </p>
 <p align="center">
+  <img src="results/roc_curve_xgb.png" width="45%"/>
   <img src="results/precision_vs_recall_xgb.png" width="45%"/>
 </p>
 
@@ -208,6 +213,7 @@ All three models implemented using [tsai](https://github.com/timeseriesAI/tsai) 
 |---|---|---|---|---|
 | 0.78 | 0.65 | 0.71 | 0.967 | 0.80 |
 
+<p align="center">
   <img src="results/roc_curve_mlstm_fcn.png" width="45%"/>
 </p>
 <p align="center">
@@ -232,9 +238,10 @@ Best-performing model overall. Self-attention captures long-range temporal depen
 
 <p align="center">
   <img src="results/confusion_matrix_tst.png" width="45%"/>
-  <img src="results/roc_curve_tst.png" width="45%"/>
+ 
 </p>
 <p align="center">
+  <img src="results/roc_curve_tst.png" width="45%"/>
   <img src="results///pr_tst.png" width="45%"/>
 </p>
 
@@ -407,4 +414,4 @@ MIT — see [`LICENSE`](LICENSE).
 
 ---
 
-*Research thesis project — time-series anomaly detection for insider threat detection in cybersecurity.*
+*Research project — time-series anomaly detection for insider threat detection in cybersecurity.*
